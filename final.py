@@ -8,8 +8,8 @@ output_path = DIR
 file_count = len([name for name in os.listdir(DIR) if os.path.isfile(os.path.join(DIR, name))])
 name = input("Enter input file basename: ")
 out_name = input("Enter output file base:")
-size = input("Enter the max size in bytes")
-b = bytes(size, 'utf-8')
+size = input("Enter the max size in bytes:")
+size = int(size)
 DIR += name
 ext = ".json"
 base_num = 1 
@@ -54,6 +54,9 @@ for i in range(file_count):
 
 	with open(output_path + write_name,'w',) as outfile:
 		json.dump(result,outfile)
+	length = os.path.getsize(output_path + write_name)
+	if(length > size):
+		os.remove(output_path + write_name)
 	w_num += 1
 	outfile.close()
 	json_file.close()
