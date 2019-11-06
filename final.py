@@ -4,11 +4,13 @@ import json
 # path = "/home/ramanan/Downloads/test"
 DIR = input("Enter path:")
 DIR += "/"
+#for windows
+# DIR += "\\"
 output_path = DIR
 file_count = len([name for name in os.listdir(DIR) if os.path.isfile(os.path.join(DIR, name))])
 name = input("Enter input file basename: ")
 out_name = input("Enter output file base:")
-max_size = input("Enter the max size in bytes")
+max_size = input("Enter the max size in bytes:")
 max_size = int(max_size)
 DIR += name
 ext = ".json"
@@ -16,7 +18,7 @@ base_num = 1
 w_num = 1;
 
 
-with open(DIR + "1.json") as json_file:
+with open(DIR + "1.json") as json_file: #converting to string to get class value
 	S = json.load(json_file)
 
 res = json.dumps(S)
