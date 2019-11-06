@@ -13,3 +13,5 @@
 
 - If the number of input files in the given input directory  is 'n' and say if there are a maximum of 'm' objects in an input file, then the code runs in: 
 # O(n * m)
+
+# NOTE: The max_size check happens as soon as the ouput json is written. If the file size exceeds the given size, the json file is deleted as soon as it is written.
