@@ -1,5 +1,6 @@
 # JSON Merger 
--This is a python script that merges multiple json files and keeps writing them to output files in the same directory.
+
+- This is a python script that merges multiple json files and keeps writing them to output files in the same directory.
 
 - First the number of json files in the directory are read and the count is stored.
 
