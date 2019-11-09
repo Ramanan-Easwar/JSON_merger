@@ -1,0 +1,5 @@
+# INTERACTIVE = 'interactive'
+INPUT_DIR = 'dir'
+INPUT_PREFIX = 'prefix'
+OUTPUT_PREFIX = 'oprefix'
+FILE_SIZE = 'max_size'
