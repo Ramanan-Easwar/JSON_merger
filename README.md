@@ -1,21 +1,26 @@
 # JSON Merger 
+ A python script that merges any number of json files with same basename and writes into a new json file.
+ 
+ The merging of files happens until the size of the file exceeds the given maximum filesize.
+ 
+ The files are encoded with UTF-8 to support other languages. 
 
-- This is a python script that merges multiple json files and keeps writing them to output files in the same directory.
+# Running on command-line
+ python main.py -i True -d [directory path] -p [input basename] -o [output basename] -m [max filesize in bytes]
+ 
+ python main.py -h *(to get the command-line flags for more details)*
 
-- First the number of json files in the directory are read and the count is stored.
+# Using stdin
 
-- Then the key for the json file is noted by converting the json to a string object using json.dumps() and getting the common JSON object name for the json files. 
-- Then we iterate through each JSON file in the directory and then for each time we store the JSON that was read in a dictionary and simply dump the dictionary variable into a new output JSON file i.e. writing it to a JSON file.
-
-- Thus, the first output file has contents of file1,file2 then the next output file has file1,file2,file3... and it goes on up until all the files in the input directory are read.
-
-- The write operation happens iff the file size is less than the input max size.
-
-- NOTE: The max_size check happens as soon as the ouput json is written. If the file size exceeds the given size, the json file is deleted as soon as it is written.
+ Simply run the main.py file and it will prompt you to enter the details (make sure to enter the correct path including starting and the ending '/' or '\' depending on your os)
+ 
+ _example directory:_
+      /home/user1/Documents/files/
+      
+ 
 
 # Code Complexity
 
-- If the number of input files in the given input directory  is 'n' and say if there are a maximum of 'm' objects in an input file, then the code runs in: 
-# O(n * m)
+- If the number of input files in the given input directory  is 'n', then it runs in:  O(n)
 
 
