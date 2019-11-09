@@ -1,4 +1,4 @@
-# INTERACTIVE = 'interactive'
+INTERACTIVE = 'interactive'
 INPUT_DIR = 'dir'
 INPUT_PREFIX = 'prefix'
 OUTPUT_PREFIX = 'oprefix'
