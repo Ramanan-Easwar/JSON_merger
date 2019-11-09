@@ -12,7 +12,7 @@
 
 # Using stdin
 
- Simply run the main.py file and it will prompt you to enter the details (make sure to enter the correct path including starting and the ending '/' or '\' depending on your os)
+ Simply run the main.py file and it will prompt you to enter the details (make sure to enter the correct path including starting and the ending '/' or '\\' depending on your os)
  
  _example directory:_
       /home/user1/Documents/files/
